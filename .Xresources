@@ -1,0 +1,4 @@
+! Disable printing the terminal contents when pressing PrintScreen.
+URxvt.print-pipe: "cat > /dev/null"
+URxvt.font: xft:monospace:size=12
+URxvt.letterSpace: -1
