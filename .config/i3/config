@@ -173,6 +173,7 @@ bar {
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
 exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id nextcloud
 bindsym $mod+i exec --no-startup-id firefox
 
 # https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
