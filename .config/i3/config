@@ -199,6 +199,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Assign windows to specific screen
 assign [class="^keepassxc$"] 10
+assign [class="^TelegramDesktop$"] 9
 
 # Lock
 bindsym $mod+l exec --no-startup-id i3lock && sleep 1, mode "default"
