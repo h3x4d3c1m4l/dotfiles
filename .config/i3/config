@@ -167,6 +167,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3blocks
+#	font pango:Inconsolata, Icons 12
 }
 
 # custom meuq
@@ -176,6 +177,7 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id nextcloud
 exec --no-startup-id keepassxc
 exec --no-startup-id workrave
+exec --no-startup-id flameshot
 bindsym $mod+i exec --no-startup-id firefox
 
 # https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
@@ -203,3 +205,6 @@ assign [class="^TelegramDesktop$"] 9
 
 # Lock
 bindsym $mod+l exec --no-startup-id i3lock && sleep 1, mode "default"
+
+# Screenshots
+bindsym $mod+p exec --no-startup-id flameshot gui
