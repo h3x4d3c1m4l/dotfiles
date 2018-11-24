@@ -2,7 +2,7 @@
 export DOTNET_ROOT=$(dirname $(realpath $(which dotnet)))
 export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
 export ELECTRON_TRASH=trash-cli
-export PATH="$PATH:/home/sander/.dotnet/tools"
+export PATH="$PATH:/home/sander/.dotnet/tools:/home/sander/.local/bin"
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
 xinput --set-prop "bcm5974" "libinput Natural Scrolling Enabled" 1
