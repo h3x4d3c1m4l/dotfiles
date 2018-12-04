@@ -6,4 +6,5 @@ export PATH="$PATH:/home/sander/.dotnet/tools:/home/sander/.local/bin"
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
 xinput --set-prop "bcm5974" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
 setxkbmap -option numpad:microsoft
