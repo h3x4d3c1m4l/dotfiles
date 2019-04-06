@@ -1,0 +1,1 @@
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'kate'; else echo 'joe'; fi)"
