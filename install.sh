@@ -10,7 +10,7 @@ fi
 
 # dependencies
 pacaur -S --needed nerd-fonts-complete
-sudo pacman -S --needed git wget base-devel joe fish networkmanager irqbalance rng-tools openssh 
+sudo pacman -S --needed git wget base-devel joe fish networkmanager irqbalance rng-tools openssh thefuck
 sudo pacman -S --needed xorg-xinput guake kate workrave firefox chromium
 
 # timezone, locale, default shell
@@ -33,11 +33,12 @@ ln -sf $dotfiles/.xsession ~/.xsession
 mkdir -p ~/.config/i3 > /dev/null 2>&1
 mkdir -p ~/.config/i3blocks > /dev/null 2>&1
 mkdir -p ~/.config/systemd/user > /dev/null 2>&1
-mkdir -p ~/.gconf/apps/guake > /dev/null 2>&1
+mkdir -p ~/.config/fish/conf.d > /dev/null 2>&1
 ln -sf $dotfiles/.config/i3/config ~/.config/i3/config
 ln -sf $dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 ln -sf $dotfiles/.zshrc ~/.zshrc
 ln -sf $dotfiles/.config/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+ln -sf $dotfiles/.config/fish/conf.d/custom.fish ~/.config/fish/conf.d/custom.fish
 systemctl --user enable --now ssh-agent.service
 
 # global config files
