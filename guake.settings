@@ -1,0 +1,34 @@
+[general]
+abbreviate-tab-names=false
+compat-delete='delete-sequence'
+display-n=0
+gtk-prefer-dark-theme=false
+gtk-theme-name='Adwaita-dark'
+history-size=1000
+max-tab-name-length=100
+mouse-display=true
+open-tab-cwd=true
+prompt-on-quit=true
+quick-open-command-line='kate %(file_path)s'
+quick-open-enable=true
+scroll-keystroke=true
+start-at-login=true
+use-default-font=false
+use-popup=true
+use-scrollbar=true
+use-trayicon=true
+window-halignment=0
+window-height=72
+window-losefocus=false
+window-refocus=false
+window-tabbar=true
+window-width=100
+
+[style/background]
+transparency=90
+
+[style/font]
+allow-bold=true
+palette='#323232323232:#C2C228283232:#8E8EC4C43D3D:#E0E0C6C64F4F:#4343A5A5D5D5:#8B8B5757B5B5:#8E8EC4C43D3D:#EEEEEEEEEEEE:#323232323232:#C2C228283232:#8E8EC4C43D3D:#E0E0C6C64F4F:#4343A5A5D5D5:#8B8B5757B5B5:#8E8EC4C43D3D:#FFFFFFFFFFFF:#CACACECECDCD:#111112121313'
+palette-name='Seti'
+style='Hack Nerd Font Mono 14'
