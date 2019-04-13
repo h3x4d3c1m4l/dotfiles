@@ -1,0 +1,3 @@
+evdev:input:b0003v05ACp0291*
+  KEYBOARD_KEY_700E7=rightalt
+  KEYBOARD_KEY_700E6=rightctrl

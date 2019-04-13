@@ -16,7 +16,7 @@ sudo pacman -S --needed xorg-xinput guake kate workrave firefox chromium
 # timezone, locale, default shell
 sudo timedatectl set-timezone Europe/Amsterdam
 sudo localectl set-locale LANG=nl_NL.UTF-8 LC_MESSAGES=en_US.UTF-8
-chsh -s /usr/bin/fish
+#chsh -s /usr/bin/fish
 
 # services
 sudo systemctl enable --now rngd
@@ -42,4 +42,5 @@ ln -sf $dotfiles/.config/fish/conf.d/custom.fish ~/.config/fish/conf.d/custom.fi
 systemctl --user enable --now ssh-agent.service
 
 # global config files
-sudo ln -sf $dotfiles/profile.d/* /etc/profile.d/
+sudo ln -sf $dotfiles/etc/profile.d/* /etc/profile.d/
+sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/10-my-modifiers.hwdb
