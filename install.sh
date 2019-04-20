@@ -9,7 +9,7 @@ if ! [ -x "$(command -v pacaur)" ]; then
 fi
 
 # dependencies
-pacaur -S --needed nerd-fonts-complete
+pacaur -S --needed nerd-fonts-hack
 sudo pacman -S --needed git wget base-devel joe fish networkmanager irqbalance rng-tools openssh thefuck
 sudo pacman -S --needed xorg-xinput guake kate workrave firefox chromium
 
