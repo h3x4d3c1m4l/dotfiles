@@ -12,7 +12,7 @@ fi
 pacaur -S --needed nerd-fonts-hack nm-applet-indicator
 sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck
 sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
-sudo pacman -S --needed sway waybar urxvt rofi
+sudo pacman -S --needed sway waybar rxvt-unicode-terminfo rofi ttf-font-awesome
 
 # timezone, locale, default shell
 sudo timedatectl set-timezone Europe/Amsterdam

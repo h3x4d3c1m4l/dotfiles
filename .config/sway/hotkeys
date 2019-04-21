@@ -69,16 +69,16 @@ bindsym $mod+Right focus right
 bindsym $mod+a focus parent # move focus to the parent container
 
 # Switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $w01
+bindsym $mod+2 workspace $w02
+bindsym $mod+3 workspace $w03
+bindsym $mod+4 workspace $w04
+bindsym $mod+5 workspace $w05
+bindsym $mod+6 workspace $w06
+bindsym $mod+7 workspace $w07
+bindsym $mod+8 workspace $w08
+bindsym $mod+9 workspace $w09
+bindsym $mod+0 workspace $w10
 
 # Move window
 bindsym $mod+Shift+$left move left
@@ -91,16 +91,16 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Move window to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $w01
+bindsym $mod+Shift+2 move container to workspace $w02
+bindsym $mod+Shift+3 move container to workspace $w03
+bindsym $mod+Shift+4 move container to workspace $w04
+bindsym $mod+Shift+5 move container to workspace $w05
+bindsym $mod+Shift+6 move container to workspace $w06
+bindsym $mod+Shift+7 move container to workspace $w07
+bindsym $mod+Shift+8 move container to workspace $w08
+bindsym $mod+Shift+9 move container to workspace $w09
+bindsym $mod+Shift+0 move container to workspace $w10
 
 #
 # Container resize:
