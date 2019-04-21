@@ -1,0 +1,32 @@
+#
+# Default applications:
+#
+exec xrdb $HOME/.Xresources # load terminal settings (this works on X out of the box)
+set $term urxvt
+set $browser chromium
+
+#
+# Autostart:
+# Hint: use `swaymsg -t get_tree` to retrieve the class of a window
+#
+assign [class="keepassxc"] workspace 10
+assign [app_id="telegram-desktop"] workspace 9
+exec keepassxc
+exec nextcloud
+exec nm-applet --indicator
+
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+#
+# Bar:
+#
+bar {
+	swaybar_command waybar
+}
+
+#
+# Includes:
+#
+include hardware
+include hotkeys
+include /etc/sway/config.d/*

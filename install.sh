@@ -9,9 +9,10 @@ if ! [ -x "$(command -v pacaur)" ]; then
 fi
 
 # dependencies
-pacaur -S --needed nerd-fonts-complete
-sudo pacman -S --needed git wget base-devel joe fish networkmanager irqbalance rng-tools openssh thefuck
-sudo pacman -S --needed xorg-xinput guake kate workrave firefox chromium
+pacaur -S --needed nerd-fonts-hack nm-applet-indicator
+sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck
+sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
+sudo pacman -S --needed sway waybar urxvt rofi
 
 # timezone, locale, default shell
 sudo timedatectl set-timezone Europe/Amsterdam
@@ -25,17 +26,19 @@ sudo systemctl enable --now systemd-timesyncd
 sudo systemctl enable --now NetworkManager
 
 # user config files
-dconf reset -f /apps/guake/
-dconf load /apps/guake/ < $dotfiles/guake.settings
+#dconf reset -f /apps/guake/
+#dconf load /apps/guake/ < $dotfiles/guake.settings
 ln -sf $dotfiles/.Xmodmap ~/.Xmodmap
 ln -sf $dotfiles/.Xresources ~/.Xresources
 ln -sf $dotfiles/.xsession ~/.xsession
-mkdir -p ~/.config/i3 > /dev/null 2>&1
-mkdir -p ~/.config/i3blocks > /dev/null 2>&1
+mkdir -p ~/.config/sway > /dev/null 2>&1
+mkdir -p ~/.config/waybar > /dev/null 2>&1
 mkdir -p ~/.config/systemd/user > /dev/null 2>&1
 mkdir -p ~/.config/fish/conf.d > /dev/null 2>&1
-ln -sf $dotfiles/.config/i3/config ~/.config/i3/config
-ln -sf $dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
+ln -sf $dotfiles/.config/sway/config ~/.config/sway/config
+ln -sf $dotfiles/.config/sway/hotkeys ~/.config/sway/hotkeys
+ln -sf $dotfiles/.config/sway/hardware ~/.config/sway/hardware
+ln -sf $dotfiles/.config/waybar/config ~/.config/waybar/config
 ln -sf $dotfiles/.zshrc ~/.zshrc
 ln -sf $dotfiles/.config/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
 ln -sf $dotfiles/.config/fish/conf.d/custom.fish ~/.config/fish/conf.d/custom.fish
