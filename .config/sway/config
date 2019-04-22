@@ -1,33 +1,41 @@
 #
 # Default applications:
 #
-exec xrdb $HOME/.Xresources # load terminal settings (this works on X out of the box)
-set $term urxvt
+set $term termite
 set $browser GDK_BACKEND=wayland firefox
+
+#output eDP-1 scale 1.25
 
 #
 # Workspaces:
 #
-set $w01 1
-set $w02 2
+set $w01 1: 
+set $w02 2: 
 set $w03 3
 set $w04 4
 set $w05 5
 set $w06 6
 set $w07 7
-set $w08 8: T
-set $w09 9: IM
-set $w10 10: BG
+set $w08 8: 
+set $w09 9: 
+set $w10 10: 
 
 #
 # Autostart:
 # Hint: use `swaymsg -t get_tree` to retrieve the class of a window
 #
-assign [class="keepassxc"] workspace $w10
+assign [app_id="firefox"] workspace $w01
+assign [app_id="Chromium"] workspace $w01
+assign [class="code-oss"] workspace $w02
+assign [app_id="termite"] workspace $w08
 assign [app_id="telegram-desktop"] workspace $w09
+assign [class="keepassxc"] workspace $w10
 exec keepassxc
-exec telegram-desktop
+exec QT_WAYLAND_DISABLE_WINDOWDECORATION=1 telegram-desktop # https://github.com/swaywm/sway/wiki
 exec nextcloud
+exec $term
+exec $browser
+exec code
 
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg $HOME/Images/kda-beat-saber.jpg fill
