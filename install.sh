@@ -9,8 +9,8 @@ if ! [ -x "$(command -v pacaur)" ]; then
 fi
 
 # dependencies
-pacaur -S --needed nerd-fonts-hack
-sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck
+pacaur -S --needed nerd-fonts-hack snapd
+sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck apparmor
 sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
 sudo pacman -S --needed sway waybar termite rofi ttf-font-awesome mako
 sudo pacman -S --needed p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzip lzop unarj poppler-glib libgsf gvfs-mtp gvfs-gphoto2 gvfs-smb file-roller ark xarchiver gvfs tumbler thunar-volman thunar-archive-plugin thunar
@@ -25,6 +25,9 @@ sudo systemctl enable --now rngd
 sudo systemctl enable --now irqbalance
 sudo systemctl enable --now systemd-timesyncd
 sudo systemctl enable --now NetworkManager
+sudo systemctl enable --now apparmor.service
+sudo systemctl enable --now snapd.apparmor.service
+sudo systemctl enable --now snapd.socket
 
 # user config files
 #dconf reset -f /apps/guake/
