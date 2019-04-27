@@ -12,7 +12,7 @@ fi
 pacaur -S --needed nerd-fonts-hack snapd
 sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck apparmor
 sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
-sudo pacman -S --needed sway waybar termite rofi ttf-font-awesome mako
+sudo pacman -S --needed sway waybar termite rofi ttf-font-awesome mako light
 sudo pacman -S --needed p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzip lzop unarj poppler-glib libgsf gvfs-mtp gvfs-gphoto2 gvfs-smb file-roller ark xarchiver gvfs tumbler thunar-volman thunar-archive-plugin thunar
 
 # timezone, locale, default shell
@@ -44,6 +44,7 @@ ln -sf $dotfiles/.config/sway/config ~/.config/sway/config
 ln -sf $dotfiles/.config/sway/hotkeys ~/.config/sway/hotkeys
 ln -sf $dotfiles/.config/sway/hardware ~/.config/sway/hardware
 ln -sf $dotfiles/.config/waybar/config ~/.config/waybar/config
+ln -sf $dotfiles/.config/waybar/style.css ~/.config/waybar/style.css
 ln -sf $dotfiles/.zshrc ~/.zshrc
 ln -sf $dotfiles/.config/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
 ln -sf $dotfiles/.config/fish/conf.d/custom.fish ~/.config/fish/conf.d/custom.fish
@@ -53,3 +54,6 @@ systemctl --user enable --now ssh-agent.service
 # global config files
 sudo ln -sf $dotfiles/etc/profile.d/* /etc/profile.d/
 sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/10-my-modifiers.hwdb
+
+# other
+sudo ln -sf $dotfiles/usr/bin/code-x11 /usr/bin/code-x11

@@ -2,7 +2,7 @@
 # Default applications:
 #
 set $term termite
-set $browser GDK_BACKEND=wayland firefox
+set $browser firefox
 
 #output eDP-1 scale 1.25
 
@@ -11,7 +11,7 @@ set $browser GDK_BACKEND=wayland firefox
 #
 set $w01 1: 
 set $w02 2: 
-set $w03 3
+set $w03 3: 
 set $w04 4
 set $w05 5
 set $w06 6
@@ -27,6 +27,7 @@ set $w10 10: 
 assign [app_id="firefox"] workspace $w01
 assign [app_id="Chromium"] workspace $w01
 assign [class="code-oss"] workspace $w02
+for_window [instance="spotify"] move window to workspace $w03
 assign [app_id="termite"] workspace $w08
 assign [app_id="telegram-desktop"] workspace $w09
 assign [class="Franz"] workspace $w09
@@ -36,7 +37,7 @@ exec QT_WAYLAND_DISABLE_WINDOWDECORATION=1 telegram-desktop # https://github.com
 exec nextcloud
 exec $term
 exec $browser
-exec code
+exec code-x11
 exec mako # notification server
 exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
