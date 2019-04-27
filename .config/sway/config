@@ -29,6 +29,7 @@ assign [app_id="Chromium"] workspace $w01
 assign [class="code-oss"] workspace $w02
 assign [app_id="termite"] workspace $w08
 assign [app_id="telegram-desktop"] workspace $w09
+assign [class="Franz"] workspace $w09
 assign [class="keepassxc"] workspace $w10
 exec keepassxc
 exec QT_WAYLAND_DISABLE_WINDOWDECORATION=1 telegram-desktop # https://github.com/swaywm/sway/wiki
@@ -36,6 +37,7 @@ exec nextcloud
 exec $term
 exec $browser
 exec code
+exec mako # notification server
 
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg $HOME/Images/kda-beat-saber.jpg fill
