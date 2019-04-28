@@ -6,6 +6,9 @@ set $down j
 set $up k
 set $right l
 
+# Lock
+bindsym Mod4+l exec swaylock
+
 # Open terminal
 bindsym $mod+Return exec $term
 
