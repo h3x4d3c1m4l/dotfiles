@@ -29,7 +29,7 @@ assign [app_id="Chromium"] workspace $w01
 assign [class="code-oss"] workspace $w02
 for_window [instance="spotify"] move window to workspace $w03
 assign [app_id="termite"] workspace $w08
-assign [app_id="telegram-desktop"] workspace $w09
+assign [app_id="telegramdesktop"] workspace $w09
 assign [class="Franz"] workspace $w09
 assign [class="keepassxc"] workspace $w10
 exec keepassxc
