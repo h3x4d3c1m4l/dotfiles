@@ -1,7 +1,7 @@
 #
 # Default applications:
 #
-set $term termite
+set $term alacritty
 set $browser firefox
 
 #output eDP-1 scale 1.25
@@ -29,6 +29,7 @@ assign [app_id="Chromium"] workspace $w01
 assign [class="code-oss"] workspace $w02
 for_window [instance="spotify"] move window to workspace $w03
 assign [app_id="termite"] workspace $w08
+assign [app_id="Alacritty"] workspace $w08
 assign [app_id="telegramdesktop"] workspace $w09
 assign [class="Franz"] workspace $w09
 assign [class="keepassxc"] workspace $w10

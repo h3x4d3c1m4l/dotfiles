@@ -40,6 +40,7 @@ mkdir -p ~/.config/waybar > /dev/null 2>&1
 mkdir -p ~/.config/systemd/user > /dev/null 2>&1
 mkdir -p ~/.config/fish/conf.d > /dev/null 2>&1
 mkdir -p ~/.config/termite > /dev/null 2>&1
+mkdir -p ~/.config/alacritty > /dev/null 2>&1
 ln -sf $dotfiles/.config/sway/config ~/.config/sway/config
 ln -sf $dotfiles/.config/sway/hotkeys ~/.config/sway/hotkeys
 ln -sf $dotfiles/.config/sway/hardware ~/.config/sway/hardware
@@ -49,6 +50,7 @@ ln -sf $dotfiles/.zshrc ~/.zshrc
 ln -sf $dotfiles/.config/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
 ln -sf $dotfiles/.config/fish/conf.d/custom.fish ~/.config/fish/conf.d/custom.fish
 ln -sf $dotfiles/.config/termite/config ~/.config/termite/config
+ln -sf $dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 systemctl --user enable --now ssh-agent.service
 
 # global config files
