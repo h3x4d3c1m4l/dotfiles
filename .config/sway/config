@@ -41,6 +41,7 @@ exec $browser
 exec code-x11
 exec mako # notification server
 exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
+exec GDK_BACKEND=x11 nm-applet --indicator
 
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg $HOME/Images/kda-beat-saber.jpg fill
