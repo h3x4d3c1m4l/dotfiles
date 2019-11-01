@@ -3,13 +3,13 @@
 dotfiles=~/Sources/dotfiles
 
 # prechecks
-if ! [ -x "$(command -v pacaur)" ]; then
-  echo 'pacaur not installed!' >&2
+if ! [ -x "$(command -v yay)" ]; then
+  echo 'yay not installed!' >&2
   exit 1
 fi
 
 # dependencies
-pacaur -S --needed nerd-fonts-hack snapd
+yay -S --needed nerd-fonts-hack snapd
 sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck apparmor
 sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
 sudo pacman -S --needed sway waybar termite rofi ttf-font-awesome mako light
