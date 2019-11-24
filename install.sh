@@ -12,7 +12,7 @@ fi
 yay -S --needed nerd-fonts-hack snapd
 sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck apparmor
 sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
-sudo pacman -S --needed sway waybar termite rofi ttf-font-awesome mako light
+sudo pacman -S --needed sway waybar termite termite-terminfo rofi ttf-font-awesome mako light
 sudo pacman -S --needed p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzip lzop unarj poppler-glib libgsf gvfs-mtp gvfs-gphoto2 gvfs-smb file-roller ark xarchiver gvfs tumbler thunar-volman thunar-archive-plugin thunar
 
 # timezone, locale, default shell
