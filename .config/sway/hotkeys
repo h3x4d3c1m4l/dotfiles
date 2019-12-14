@@ -125,3 +125,10 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+#
+# Keyboard layout
+#
+input * {
+    xkb_options compose:caps
+}
