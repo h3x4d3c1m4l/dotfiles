@@ -8,6 +8,12 @@ if ! [ -x "$(command -v yay)" ]; then
   exit 1
 fi
 
+# remove legacy stuff
+sudo unlink /usr/bin/code-x11
+
+# add current user to nice groups
+sudo usermod -aG uucp,wheel,video $USER
+
 # dependencies
 yay -S --needed nerd-fonts-hack snapd
 sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck apparmor
@@ -18,7 +24,7 @@ sudo pacman -S --needed p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzi
 # timezone, locale, default shell
 sudo timedatectl set-timezone Europe/Amsterdam
 sudo localectl set-locale LANG=nl_NL.UTF-8 LC_MESSAGES=en_US.UTF-8
-#chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish
 
 # services
 sudo systemctl enable --now rngd
@@ -56,6 +62,3 @@ systemctl --user enable --now ssh-agent.service
 # global config files
 sudo ln -sf $dotfiles/etc/profile.d/* /etc/profile.d/
 sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/10-my-modifiers.hwdb
-
-# other
-sudo ln -sf $dotfiles/usr/bin/code-x11 /usr/bin/code-x11
