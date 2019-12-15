@@ -15,7 +15,7 @@ sudo unlink /usr/bin/code-x11
 sudo usermod -aG uucp,wheel,video $USER
 
 # dependencies
-yay -S --needed nerd-fonts-hack snapd
+yay -S --needed nerd-fonts-hack snapd network-manager-applet-indicator redshift-wlr-gamma-control-git
 sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck apparmor
 sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
 sudo pacman -S --needed sway waybar termite termite-terminfo rofi ttf-font-awesome mako light

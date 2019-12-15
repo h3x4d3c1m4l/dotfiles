@@ -7,6 +7,12 @@ set $browser firefox
 #output eDP-1 scale 1.25
 
 #
+# Rice stuff:
+#
+gaps inner 10
+font pango:sans serif 12
+
+#
 # Workspaces:
 #
 set $w01 1: 
@@ -18,7 +24,7 @@ set $w06 6
 set $w07 7
 set $w08 8: 
 set $w09 9: 
-set $w10 10: 
+set $w10 10: 
 
 #
 # Autostart:
@@ -31,7 +37,9 @@ for_window [instance="spotify"] move window to workspace $w03
 assign [app_id="termite"] workspace $w08
 assign [app_id="Alacritty"] workspace $w08
 assign [app_id="telegramdesktop"] workspace $w09
+for_window [app_id="telegramdesktop"] layout tabbed
 assign [class="Franz"] workspace $w09
+assign [app_id="thunderbird"] workspace $w09
 assign [app_id="keepassxc"] workspace $w10
 exec keepassxc
 exec telegram-desktop # https://github.com/swaywm/sway/wiki
@@ -42,6 +50,8 @@ exec code
 exec mako # notification server
 exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 exec GDK_BACKEND=x11 nm-applet --indicator
+exec redshift-gtk
+exec thunderbird
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg $HOME/Pictures/kda-beat-saber.jpg fill
