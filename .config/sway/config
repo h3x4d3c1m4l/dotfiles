@@ -2,7 +2,7 @@
 # Default applications:
 #
 set $term alacritty
-set $browser firefox
+set $browser chromium
 
 #output eDP-1 scale 1.25
 
@@ -31,7 +31,7 @@ set $w10 10: 
 # Hint: use `swaymsg -t get_tree` to retrieve the class of a window
 #
 assign [app_id="firefox"] workspace $w01
-assign [app_id="Chromium"] workspace $w01
+assign [class="Chromium"] workspace $w01
 assign [class="code-oss"] workspace $w02
 for_window [instance="spotify"] move window to workspace $w03
 assign [app_id="termite"] workspace $w08

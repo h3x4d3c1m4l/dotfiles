@@ -15,12 +15,18 @@ sudo unlink /usr/bin/code-x11
 sudo usermod -aG uucp,wheel,video $USER
 
 # dependencies
-yay -S --needed nerd-fonts-hack snapd network-manager-applet-indicator redshift-wlr-gamma-control-git
-sudo pacman -S --needed wget base-devel joe fish irqbalance rng-tools openssh thefuck apparmor
-sudo pacman -S --needed firefox chromium keepassxc gnome-keyring telegram-desktop nextcloud-client
-sudo pacman -S --needed sway waybar termite termite-terminfo rofi ttf-font-awesome mako light
-sudo pacman -S --needed p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzip lzop unarj poppler-glib libgsf gvfs-mtp gvfs-gphoto2 gvfs-smb file-roller ark xarchiver gvfs tumbler thunar-volman thunar-archive-plugin thunar
-
+yay -S --needed base base-devel sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost \
+                sl cowsay thefuck \
+                networkmanager irqbalance rng-tools \
+                sddm lightdm lightdm-gtk-greeter \
+                sway waybar rofi mako light ttf-font-awesome network-manager-applet-indicator redshift-wlr-gamma-control-git \
+                chromium firefox keepassxc alacritty alacritty-terminfo termite termite-terminfo thunderbird telegram-desktop nextcloud-client \
+                code rustup dotnet-host dotnet-runtime dotnet-sdk cmake \
+                font-bh-ttf ttf-bitstream-vera ttf-croscore ttf-dejavu ttf-droid ttf-roboto noto-fonts ttf-liberation ttf-ubuntu-font-family nerd-fonts-hack \
+                snapd flatpak \
+                plymouth-git plymouth-theme-arch-breeze-git \
+                p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzip lzop unarj lz4 poppler-glib libgsf gvfs-mtp gvfs-gphoto2 gvfs-smb file-roller ark xarchiver gvfs tumbler thunar-volman thunar-archive-plugin thunar
+                
 # timezone, locale, default shell
 sudo timedatectl set-timezone Europe/Amsterdam
 sudo localectl set-locale LANG=nl_NL.UTF-8 LC_MESSAGES=en_US.UTF-8
@@ -60,5 +66,7 @@ ln -sf $dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.y
 systemctl --user enable --now ssh-agent.service
 
 # global config files
+sudo mkdir /etc/sddm.conf.d
 sudo ln -sf $dotfiles/etc/profile.d/* /etc/profile.d/
-sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/10-my-modifiers.hwdb
+sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/
+sudo ln -sf $dotfiles/etc/sddm.conf.d/settings.conf /etc/sddm.conf.d/

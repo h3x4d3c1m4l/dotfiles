@@ -1,3 +1,0 @@
-#!/bin/sh
-
-GDK_BACKEND=x11 /usr/bin/code 2>/dev/null
