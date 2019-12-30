@@ -15,13 +15,13 @@ sudo unlink /usr/bin/code-x11
 sudo usermod -aG uucp,wheel,video $USER
 
 # dependencies
-yay -S --needed base base-devel sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost pulseaudio \
+yay -S --needed base base-devel sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost pulseaudio htop \
                 sl cowsay thefuck \
                 networkmanager inettools net-tools irqbalance rng-tools \
                 sddm plasma-workspace lightdm lightdm-gtk-greeter \
                 sway rofi mako light ttf-font-awesome network-manager-applet-indicator redshift-wlr-gamma-control-git swaylock swayidle qt5-wayland \
                 waybar acpilight libappindicator-gtk2 libappindicator-gtk3 libappindicator-sharp \
-                chromium firefox keepassxc alacritty alacritty-terminfo termite termite-terminfo thunderbird telegram-desktop nextcloud-client \
+                gnome-keyring seahorse chromium firefox keepassxc alacritty alacritty-terminfo termite termite-terminfo thunderbird telegram-desktop nextcloud-client \
                 code rustup dotnet-host dotnet-runtime dotnet-sdk cmake \
                 font-bh-ttf ttf-bitstream-vera ttf-croscore ttf-dejavu ttf-droid ttf-roboto noto-fonts ttf-liberation ttf-ubuntu-font-family nerd-fonts-hack \
                 snapd flatpak \
