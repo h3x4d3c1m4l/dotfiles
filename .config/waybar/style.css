@@ -67,7 +67,7 @@ window#waybar.chromium #workspaces button.focused {
     border-bottom: 3px solid #ffffff;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #custom-backlight {
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #custom-backlight, #custom-backlight_kbd_mac {
     padding: 0 10px;
     margin: 0 5px;
     color: #ffffff;
@@ -117,7 +117,7 @@ label:focus {
     background: #9b59b6;
 }
 
-#backlight, #custom-backlight {
+#backlight, #custom-backlight, #custom-backlight_kbd_mac {
     background: #90b1b1;
 }
 

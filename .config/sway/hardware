@@ -1,5 +1,12 @@
 # Yoga 530 trackpad
-input "1267:12363:MSFT0001:00_04F3:304B_Touchpad" {	
+input "1267:12363:MSFT0001:00_04F3:304B_Touchpad" {
+	#dwt enabled
+	tap enabled
+	natural_scroll enabled
+	#middle_emulation enabled
+}
+
+input "1452:657:bcm5974" {
 	#dwt enabled
 	tap enabled
 	natural_scroll enabled
