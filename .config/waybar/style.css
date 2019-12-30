@@ -189,3 +189,11 @@ label:focus {
 #mpd.paused {
     background: #51a37a;
 }
+
+#cpu.warning {
+    background: yellow;
+}
+
+#cpu.critical {
+    background: red;
+}

@@ -46,6 +46,10 @@
     },
 
     "cpu": {
+	"states": {
+            "warning": 40,
+            "critical": 80
+        },
         "format": "{usage}% "
     },
 
