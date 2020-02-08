@@ -71,3 +71,4 @@ sudo mkdir /etc/sddm.conf.d
 sudo ln -sf $dotfiles/etc/profile.d/* /etc/profile.d/
 sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/
 sudo ln -sf $dotfiles/etc/sddm.conf.d/settings.conf /etc/sddm.conf.d/
+sudo ln -sf $dotfiles/etc/modprobe.d/* /etc/modprobe.d/
