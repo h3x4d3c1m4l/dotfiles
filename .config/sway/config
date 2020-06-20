@@ -2,7 +2,7 @@
 # Default applications:
 #
 set $term alacritty
-set $browser chromium
+set $browser firefox
 
 #output eDP-1 scale 1.25
 
@@ -25,6 +25,12 @@ set $w07 7
 set $w08 8: 
 set $w09 9: 
 set $w10 10: 
+
+#
+# Only show title bars whenever there are multiple tabs or multiple stacked windows
+#
+default_border pixel 1
+hide_edge_borders --i3 both
 
 #
 # Autostart:
