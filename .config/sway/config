@@ -49,7 +49,7 @@ assign [app_id="thunderbird"] workspace $w09
 assign [app_id="keepassxc"] workspace $w10
 exec keepassxc
 exec telegram-desktop # https://github.com/swaywm/sway/wiki
-exec nextcloud
+exec 'sleep 2; nextcloud'
 exec $term
 exec $browser
 exec code
@@ -58,6 +58,8 @@ exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 exec GDK_BACKEND=x11 nm-applet --indicator
 exec redshift-gtk
 exec thunderbird
+exec blueman-tray
+exec gammastep-indicator
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg $HOME/Pictures/kda-beat-saber.jpg fill

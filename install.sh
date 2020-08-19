@@ -12,21 +12,22 @@ fi
 sudo unlink /usr/bin/code-x11
 
 # add current user to nice groups
-sudo usermod -aG uucp,wheel,video $USER
+sudo usermod -aG uucp,wheel,video,audio $USER
 
 # dependencies
-yay -S --needed base base-devel sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost pulseaudio htop \
+yay -Syu --needed base base-devel sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost pulseaudio htop \
                 sl cowsay thefuck \
-                networkmanager inettools net-tools irqbalance rng-tools \
+                networkmanager dnsutils net-tools irqbalance rng-tools \
                 sddm plasma-workspace lightdm lightdm-gtk-greeter \
-                sway rofi mako light ttf-font-awesome network-manager-applet-indicator redshift-wlr-gamma-control-git swaylock swayidle qt5-wayland \
-                waybar acpilight libappindicator-gtk2 libappindicator-gtk3 libappindicator-sharp \
-                gnome-keyring seahorse chromium firefox keepassxc alacritty alacritty-terminfo termite termite-terminfo thunderbird telegram-desktop nextcloud-client \
+                sway rofi mako light ttf-font-awesome network-manager-applet gammastep swaylock swayidle qt5-wayland \
+                waybar libappindicator-gtk2 libappindicator-gtk3 \
+                gnome-keyring seahorse chromium firefox keepassxc alacritty termite termite-terminfo thunderbird telegram-desktop nextcloud-client \
                 code rustup dotnet-host dotnet-runtime dotnet-sdk cmake \
                 font-bh-ttf ttf-bitstream-vera ttf-croscore ttf-dejavu ttf-droid ttf-roboto noto-fonts ttf-liberation ttf-ubuntu-font-family nerd-fonts-hack \
                 snapd flatpak \
-                plymouth-git plymouth-theme-arch-breeze-git \
-                p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzip lzop unarj lz4 poppler-glib libgsf gvfs-mtp gvfs-gphoto2 gvfs-smb file-roller ark xarchiver gvfs tumbler thunar-volman thunar-archive-plugin thunar
+                plymouth plymouth-theme-arch-breeze-git \
+                p7zip unrar unarchiver lzop lrzip cpio arj lha lrzip lzip lzop unarj lz4 poppler-glib libgsf gvfs-mtp gvfs-gphoto2 gvfs-smb file-roller ark xarchiver gvfs tumbler thunar-volman thunar-archive-plugin thunar \
+                timidity++ soundfont-fluid
                 
 # timezone, locale, default shell
 sudo timedatectl set-timezone Europe/Amsterdam
@@ -65,11 +66,13 @@ ln -sf $dotfiles/.config/fish/conf.d/custom.fish ~/.config/fish/conf.d/custom.fi
 ln -sf $dotfiles/.config/termite/config ~/.config/termite/config
 ln -sf $dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 systemctl --user enable --now ssh-agent.service
+systemctl --user enable --now timidity.service
 
 # global config files
 sudo mkdir /etc/sddm.conf.d
 sudo ln -sf $dotfiles/etc/profile.d/* /etc/profile.d/
 sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/
 sudo ln -sf $dotfiles/etc/sddm.conf.d/settings.conf /etc/sddm.conf.d/
+sudo ln -sf $dotfiles/etc/timidity++/timidity.cfg /etc/timidity++/
 #sudo ln -sf $dotfiles/etc/modprobe.d/* /etc/modprobe.d/ #doesn't work
 sudo cp -f $dotfiles/etc/modprobe.d/* /etc/modprobe.d/
