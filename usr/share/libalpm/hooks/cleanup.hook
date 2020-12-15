@@ -1,0 +1,13 @@
+# https://aur.archlinux.org/cgit/aur.git/tree/cleanup.hook?h=pacman-cleanup-hook
+
+[Trigger]
+Operation = Remove
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Removing unnecessary cached files (keeping the latest two)…
+When = PostTransaction
+Exec = /usr/bin/paccache -rvk2
