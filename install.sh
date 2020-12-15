@@ -12,7 +12,7 @@ fi
 sudo unlink /usr/bin/code-x11
 
 # add current user to nice groups
-sudo usermod -aG uucp,wheel,video $USER
+sudo usermod -aG uucp,wheel,video,audio $USER
 
 # dependencies
 yay -S --needed base base-devel man pacman-contrib sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost pulseaudio htop \
@@ -22,7 +22,7 @@ yay -S --needed base base-devel man pacman-contrib sudo joe fish wget apparmor o
                 sway rofi mako light ttf-font-awesome network-manager-applet-indicator redshift-wlr-gamma-control-git swaylock swayidle qt5-wayland \
                 waybar libappindicator-gtk2 libappindicator-gtk3  \
                 gnome-keyring seahorse chromium firefox keepassxc alacritty thunderbird telegram-desktop nextcloud-client \
-                code rustup dotnet-host dotnet-runtime dotnet-sdk aspnet-runtime cmake \
+                code rustup dotnet-runtime dotnet-sdk cmake \
                 font-bh-ttf ttf-bitstream-vera ttf-croscore ttf-dejavu ttf-droid ttf-roboto noto-fonts ttf-liberation ttf-ubuntu-font-family nerd-fonts-hack \
                 snapd flatpak \
                 plymouth plymouth-theme-arch-breeze-git \
@@ -66,8 +66,16 @@ ln -sf $dotfiles/.config/termite/* ~/.config/termite/
 ln -sf $dotfiles/.config/alacritty/* ~/.config/alacritty/alacritty.yml
 ln -sf $dotfiles/.pam_environment ~/.pam_environment
 systemctl --user enable --now ssh-agent.service
+systemctl --user enable --now timidity.service
 
 # global config files
-for file in $(find $dotfiles/etc $dotfiles/usr -type f); do
-    sudo install -m 775 -o root -g root -D ${file} ${pkgdir}/${file#${srcdir}}
-done
+#for file in $(find $dotfiles/etc $dotfiles/usr -type f); do
+#    sudo install -m 775 -o root -g root -D ${file} ${pkgdir}/${file#${srcdir}}
+#done
+sudo mkdir /etc/sddm.conf.d
+sudo ln -sf $dotfiles/etc/profile.d/* /etc/profile.d/
+sudo ln -sf $dotfiles/etc/udev/hwdb.d/10-my-modifiers.hwdb /etc/udev/hwdb.d/
+sudo ln -sf $dotfiles/etc/sddm.conf.d/settings.conf /etc/sddm.conf.d/
+sudo ln -sf $dotfiles/etc/timidity++/timidity.cfg /etc/timidity++/
+#sudo ln -sf $dotfiles/etc/modprobe.d/* /etc/modprobe.d/ #doesn't work
+sudo cp -f $dotfiles/etc/modprobe.d/* /etc/modprobe.d/

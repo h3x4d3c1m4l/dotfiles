@@ -2,7 +2,7 @@
 # Default applications:
 #
 set $term alacritty
-set $browser chromium
+set $browser firefox
 
 #output eDP-1 scale 1.25
 
@@ -27,6 +27,12 @@ set $w09 9: 
 set $w10 10: 
 
 #
+# Only show title bars whenever there are multiple tabs or multiple stacked windows
+#
+default_border pixel 1
+hide_edge_borders --i3 both
+
+#
 # Autostart:
 # Hint: use `swaymsg -t get_tree` to retrieve the class of a window
 #
@@ -43,7 +49,7 @@ assign [app_id="thunderbird"] workspace $w09
 assign [app_id="keepassxc"] workspace $w10
 exec keepassxc
 exec telegram-desktop # https://github.com/swaywm/sway/wiki
-exec nextcloud
+exec 'sleep 2; nextcloud'
 exec $term
 exec $browser
 exec code
@@ -52,6 +58,8 @@ exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 exec GDK_BACKEND=x11 nm-applet --indicator
 exec redshift-gtk
 exec thunderbird
+exec blueman-tray
+exec gammastep-indicator
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg $HOME/Pictures/kda-beat-saber.jpg fill
