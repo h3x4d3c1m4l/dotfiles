@@ -3,8 +3,8 @@
 dotfiles=~/Sources/dotfiles
 
 # prechecks
-if ! [ -x "$(command -v yay)" ]; then
-  echo 'yay not installed!' >&2
+if ! [ -x "$(command -v paru)" ]; then
+  echo 'Paru not installed!' >&2
   exit 1
 fi
 
@@ -15,11 +15,12 @@ sudo unlink /usr/bin/code-x11
 sudo usermod -aG uucp,wheel,video,audio $USER
 
 # dependencies
-yay -S --needed base base-devel man pacman-contrib sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost pulseaudio htop \
+paru -S --needed base base-devel man pacman-contrib sudo joe fish wget apparmor openssh xorg-xauth xorg-xhost htop \
+                pipewire-pulse pipewire-alsa xdg-desktop-portal-gtk xdg-desktop-portal-kde xdg-desktop-portal-wlr \
                 sl cowsay thefuck \
                 networkmanager net-tools irqbalance rng-tools \
                 sddm plasma-workspace lightdm lightdm-gtk-greeter \
-                sway rofi mako light ttf-font-awesome network-manager-applet-indicator redshift-wlr-gamma-control-git swaylock swayidle qt5-wayland \
+                sway rofi mako light ttf-font-awesome network-manager-applet swaylock swayidle qt5-wayland gammastep \
                 waybar libappindicator-gtk2 libappindicator-gtk3  \
                 gnome-keyring seahorse chromium firefox keepassxc alacritty thunderbird telegram-desktop nextcloud-client \
                 code rustup dotnet-runtime dotnet-sdk cmake \
