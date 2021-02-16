@@ -1,0 +1,34 @@
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 23:05:00 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+termite
+code-x11
+wallet
+wallet
+font
+-x64
+DialogClears
+bell
+dynamic_title
+net-tools
+
+*** File '(Unnamed)'
+install.sh
+install.sh
+install.sh
+install.sh
+install.sh
+/home/sander/.config/sway/hardware
+/home/sander/.config/sway/hardware
+/home/sander/.config/sway/hardware
+/home/sander/.config/sway/hotkeys
+/home/sander/.config/waybar/config
+/home/sander/.config/waybar/config
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

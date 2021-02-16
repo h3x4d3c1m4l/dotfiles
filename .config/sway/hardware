@@ -1,4 +1,4 @@
-# Yoga 530 trackpad
+# Yoga 530-14ARR trackpad
 input "1267:12363:MSFT0001:00_04F3:304B_Touchpad" {
 	#dwt enabled
 	tap enabled
@@ -6,6 +6,7 @@ input "1267:12363:MSFT0001:00_04F3:304B_Touchpad" {
 	#middle_emulation enabled
 }
 
+# Macbook Air (early 2015) trackpad
 input "1452:657:bcm5974" {
 	#dwt enabled
 	tap enabled
@@ -13,7 +14,7 @@ input "1452:657:bcm5974" {
 	#middle_emulation enabled
 }
 
-# Power safe
+# power saving
 exec swayidle -w \
 	timeout 300 'swaylock -f -c 000000' \
 	timeout 600 'swaymsg "output * dpms off"' \

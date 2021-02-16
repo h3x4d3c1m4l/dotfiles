@@ -39,7 +39,7 @@ window#waybar.chromium {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
-    padding: 0px 20px;
+    padding: 0px 10px;
     background: transparent;
     color: #ffffff;
     border-bottom: 3px solid transparent;
@@ -69,7 +69,7 @@ window#waybar.chromium #workspaces button.focused {
 
 #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #custom-backlight, #custom-backlight_kbd_mac {
     padding: 0 10px;
-    margin: 0 5px;
+    margin: 0 0;
     color: #ffffff;
 }
 

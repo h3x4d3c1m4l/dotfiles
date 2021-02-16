@@ -1,7 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 42, // Waybar height
+    "height": 32, // Waybar height
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
@@ -37,7 +37,7 @@
 
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 0
     },
 
     "clock": {
@@ -102,11 +102,11 @@
     },
 
     "custom/backlight": {
-        "exec": "xbacklight -get",
+        "exec": "light",
         "format": "{}% ",
         "interval": 1,
-        "on-click": "xbacklight -inc 10",
-	"on-click-right": "xbacklight -dec 10"
+        "on-click": "light -A 10",
+	"on-click-right": "light -U 10",
     },
 
     "custom/backlight_kbd_mac": {
